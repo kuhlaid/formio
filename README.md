@@ -20,7 +20,7 @@ Git clone
 ------------------
 `cd "/mnt/c/Users/pgale/OneDrive - University of North Carolina at Chapel Hill/TARC/Code/GitLabRepos/"`
 
-`git clone --config core.autocrlf=false https://github.com/formio/formio.git`
+`git clone --config core.autocrlf=false https://github.com/kuhlaid/formio/formio.git`
 
 oc new-app nodejs:20~"https://github.com/formio/formio.git" \
 --name formio -e YARN_ENABLED="true"
