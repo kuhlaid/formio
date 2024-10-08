@@ -16,6 +16,19 @@ Here is a link to a demo of the Form Building and Form Rendering capability that
 
 http://codepen.io/travist/full/xVyMjo/
 
+Git clone
+------------------
+`cd "/mnt/c/Users/pgale/OneDrive - University of North Carolina at Chapel Hill/TARC/Code/GitLabRepos/"`
+
+`git clone --config core.autocrlf=false https://github.com/formio/formio.git`
+
+oc new-app nodejs:20~"https://github.com/formio/formio.git" \
+--name formio -e YARN_ENABLED="true"
+
+https://github.com/sclorg/s2i-nodejs-container/tree/master/20/s2i
+
+`oc delete all --selector app=formio`
+
 Run with Docker Compose
 ------------------
 The fastest way to run this library locally is to use [Docker](https://docker.com).
