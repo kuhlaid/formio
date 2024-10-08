@@ -1,0 +1,16 @@
+#!/bin/bash -e
+#
+# S2I assemble script to allow yarn enabled build instead of the default NPM (which causes issues).
+# The 'assemble' script builds your application source so that it is ready to run.
+#
+# For more information refer to the documentation:
+#	https://github.com/openshift/source-to-image/blob/master/docs/builder_image.md
+#
+
+if [ ! -z "$YARN_ENABLED" ]; then
+ echo "---> Using 'yarn install' with YARN_ARGS"
+ yarn install $YARN_ARGS
+else
+ echo "---> Using 'npm install'"
+ npm install -s
+fi
